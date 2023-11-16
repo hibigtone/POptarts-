@@ -65,8 +65,34 @@ struct Chapter1View: View {
                             .overlay(// MAKES A BORDER ROUNDED
                                 RoundedRectangle(cornerRadius: 0)
                                     .stroke(.black, lineWidth: 1))
+                        VStack {
+                            Text("Year: 2000")
+                                .rotationEffect(Angle(degrees: 270))
+                                .font(.title3)
+                                .frame(width: 111)
+                                .offset(y: -40)
+                                .fontWeight(.bold)
+                                .italic()
+                            Divider()
+                                .frame(width: 35, height: 0.35)
+                                .overlay(.black)
+                            Text("Transports: 3")
+                                .rotationEffect(Angle(degrees: 270))
+                                .font(.callout)
+                                .frame(width: 100)
+                                .fontWeight(.medium)
+                                .offset(y: 50)
+                                .italic()
+                            ZStack {
+                                Rectangle()
+                                .frame(width: 43, height: 43)
+                                .offset(y: 95)
+                                Text("Dark")
+                                .offset(y: 95)
+                                .foregroundColor(.white)}
+                        }
                     }
-                    .padding()
+                    
                     
                     ZStack {
                         RoundedRectangle(
@@ -76,7 +102,9 @@ struct Chapter1View: View {
                             .resizable()
                             .frame(width: 300, height: 320)
                             .cornerRadius(7)
-                    } .padding(.trailing)
+                           
+                    } .offset(x: -20)
+                    .padding(.trailing)
                     
                 }
                 ZStack {
@@ -137,8 +165,32 @@ struct Chapter1View: View {
                                 .overlay(// MAKES A BORDER ROUNDED
                                     RoundedRectangle(cornerRadius: 0)
                                         .stroke(.black, lineWidth: 1))
+                            VStack {
+                                Text("Year: 2000")
+                                    .rotationEffect(Angle(degrees: 270))
+                                    .font(.title3)
+                                    .frame(width: 111)
+                                    .offset(y: -40)
+                                    .fontWeight(.bold)
+                                    .italic()
+                                Divider()
+                                    .frame(width: 35, height: 0.35)
+                                    .overlay(.black)
+                                Text("Transports: 3")
+                                    .rotationEffect(Angle(degrees: 270))
+                                    .font(.callout)
+                                    .frame(width: 100)
+                                    .fontWeight(.medium)
+                                    .offset(y: 50)
+                                    .italic()
+                                ZStack {
+                                    Rectangle()
+                                    .frame(width: 43, height: 43)
+                                    .offset(y: 95)
+                            }
+                            }
                         }
-                        .padding()
+                        
                         
                         ZStack {
                             RoundedRectangle(
@@ -148,9 +200,12 @@ struct Chapter1View: View {
                                 .resizable()
                                 .frame(width: 300, height: 320)
                                 .cornerRadius(7)
-                        } .padding(.trailing)
+                               
+                        } .offset(x: -20)
+                        .padding(.trailing)
                         
                     }
+                    
                 }
             
         }
