@@ -85,11 +85,12 @@ struct Chapter1View: View {
                                 .italic()
                             ZStack {
                                 Rectangle()
-                                .frame(width: 43, height: 43)
-                                .offset(y: 95)
+                                    .frame(width: 43, height: 43)
+                                    .offset(y: 95)
                                 Text("Dark")
-                                .offset(y: 95)
-                                .foregroundColor(.white)}
+                                    .offset(y: 95)
+                                    .foregroundColor(.white)
+                            }
                         }
                     }
                     
