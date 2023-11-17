@@ -28,20 +28,13 @@ struct Chapter5View: View {
                     .ignoresSafeArea()
                 ScrollView {
                     VStack {
-                        Text("Title")
-                            .foregroundColor(.white)
-                            .font(.system(size: 20, weight: .semibold, design: .serif))
-                        Spacer()
-                        Spacer()
-                        Spacer()
-                        Spacer()
-                        Spacer()
-                        Spacer()
                         Text("FIVE")
                             .foregroundColor(.white)
-                            .font(.system(size: 15, weight: .light, design: .serif))
+                            .font(.system(size: 15, weight: .bold, design: .serif))
                         Spacer()
-                        
+                        Spacer()
+                        Spacer()
+
                         Text("third-person")
                             .foregroundColor(.white)
                             .font(.system(size: 12, weight: .light, design: .serif))
