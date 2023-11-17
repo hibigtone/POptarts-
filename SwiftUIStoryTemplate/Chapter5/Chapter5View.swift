@@ -3,21 +3,21 @@ import SwiftUI
 struct Chapter5View: View {
     let cornerRadius: CGFloat = 10
     let personOne:String = "Kassima"
-//    let personTwo:String = "Azura"
+    let personTwo:String = "Azura"
     let personThree:String = "Verna"
-//    let personFour:String = "Mrs. Fields"
+    let personFour:String = "Mrs. Fields"
     let numberofTimesAllowedtoTravel: Int = 3
-//    let foods = ["Tomatoe soup", "Grilled Fish", "Steamed carrots", "Salad"]
+    let foods = ["Tomatoe soup", "Grilled Fish", "Steamed carrots", "Salad"]
     let VeraisfeelingHelpful:Bool? = true
-//    struct womanAppearance {
-//        var herLooks: Int = 3
-//        var eyes: String = "her eyes were bloodshot, and you could hardly focus on the brown in them"
-//        var skin: String = "Her skin was unnaturally pale"
-//        var nails: String = "her nails were appearing blue"
-//
-//    }
-//    
-//    let girl = womanAppearance(eyes: "her eyes were bloodshot, and you could hardly focus on the brown in them")
+    struct womanAppearance {
+        var herLooks: Int = 3
+        var eyes: String = "her eyes were bloodshot, and you could hardly focus on the brown in them"
+        var skin: String = "Her skin was unnaturally pale"
+        var nails: String = "her nails were appearing blue"
+
+    }
+    
+    let girl = womanAppearance(eyes: "her eyes were bloodshot, and you could hardly focus on the brown in them")
 
 
     var body: some View {
@@ -79,13 +79,13 @@ struct Chapter5View: View {
                                 }
                                 
                             }
-                            Rectangle()
-                                .foregroundColor(Color("darkgray"))
-                                .frame(width: 250, height: 300)
+                            Image("asylum")
+                                .resizable()
+                                .frame(width: 270, height: 280)
                                 .cornerRadius(cornerRadius)
                                 .overlay(// MAKES A BORDER ROUNDED
                                     RoundedRectangle(cornerRadius: cornerRadius)
-                                        .stroke(.black, lineWidth: 1))
+                                        .stroke(.black, lineWidth: 2))
                         }
                         
                         ZStack{
@@ -219,11 +219,98 @@ struct Chapter5View: View {
                                             .frame(width: 300)
                                     }
                                 }
+                        ZStack {
+                            Rectangle()
+                                .foregroundColor(Color("darkgray"))
+                                .frame(width: 365, height: 230)
+                                .cornerRadius(cornerRadius)
+                                .overlay(// MAKES A BORDER ROUNDED
+                                    RoundedRectangle(cornerRadius: cornerRadius)
+                                        .stroke(.black, lineWidth: 1))
+                            VStack {
+                                         
+                                Text("'Hush, little baby dont say a word. Vera saved your life no need to thank her.' \(personThree) sang.")
+                                    .foregroundColor(.white)
+                                    .font(.system(size: 15, weight: .light, design: .serif))
+                                    .multilineTextAlignment(.center)
+                                    .frame(width: 300)
+
+                                Text("\(personOne) covered her ears and closed her eyes. 'Stop it- Is this a joke to you?! I was this close- This. Close.' She held up her index finger and thumb; pinching them together while opening her eyes to look at \(personThree). 'To figuring out how to save \(personTwo)-!'")
+                                    .foregroundColor(.white)
+                                    .font(.system(size: 15, weight: .light, design: .serif))
+                                    .multilineTextAlignment(.center)
+                                    .frame(width: 300)
+                                Text("\(personOne) quieted when she realized \(personThree) was no longer sprawled on the bed. 'What the heck-'")
+                                    .foregroundColor(.white)
+                                    .font(.system(size: 15, weight: .light, design: .serif))
+                                    .multilineTextAlignment(.center)
+                                    .frame(width: 300)
+                            }
+                        }
+                        ZStack {
+                            Rectangle()
+                                .foregroundColor(Color("darkgray"))
+                                .frame(width: 365, height: 270)
+                                .cornerRadius(cornerRadius)
+                                .overlay(// MAKES A BORDER ROUNDED
+                                    RoundedRectangle(cornerRadius: cornerRadius)
+                                        .stroke(.black, lineWidth: 1))
+                            VStack {
+                                
+                                Text("As \(personOne) began to complain, the door to her room opened. 'It's time for dinner.' \(personFour), the dietary aid, said after entering the room. 'Okay..' \(personOne) followed her out the room after looking around one last time for \(personThree). The walk to the dinning hall was silent. \(personOne) was barely even hungry, but she knew everyone was expecting her to eat so she approched the meal station. 'What would you like? There's \(foods[0]), \(foods[1]), \(foods[2]), and \(foods[3]).' A man offered with a smile. \(personOne) decided on \(foods[2]).")
+                                    .foregroundColor(.white)
+                                    .font(.system(size: 15, weight: .light, design: .serif))
+                                    .multilineTextAlignment(.center)
+                                    .frame(width: 300)
+                            }
+                            }
+                            ZStack {
+                                Rectangle()
+                                    .foregroundColor(Color("darkgray"))
+                                    .frame(width: 365, height: 230)
+                                    .cornerRadius(cornerRadius)
+                                    .overlay(// MAKES A BORDER ROUNDED
+                                        RoundedRectangle(cornerRadius: cornerRadius)
+                                            .stroke(.black, lineWidth: 1))
+                                VStack {
+                                    
+                                    Text("She took her meal and went to sit at a table, on her way she saw the woman she'd previously bumped into being escorted out of the dinning hall by paramedics. \(girl.skin), \(girl.nails), \(girl.eyes). She was showing symptoms of the lucitis plague, but how? It's been 5 years, why would she suddenly-? \(personOne) felt a wave of nausea wash over her.")
+                                        .foregroundColor(.white)
+                                        .font(.system(size: 15, weight: .light, design: .serif))
+                                        .multilineTextAlignment(.center)
+                                        .frame(width: 300)
+                                    
+                                }
+                            }
+                        ZStack {
+                            Rectangle()
+                                .foregroundColor(Color("darkgray"))
+                                .frame(width: 365, height: 300)
+                                .cornerRadius(cornerRadius)
+                                .overlay(// MAKES A BORDER ROUNDED
+                                    RoundedRectangle(cornerRadius: cornerRadius)
+                                        .stroke(.black, lineWidth: 1))
+                            VStack {
+                                
+                                Text("She went to the nearest bathroom; instantly throwing up in the sink. 'Well, that's just disgusting. You do plan on cleaning that up right?' \(personThree) said. 'Go away.' \(personOne) replied without looking up. 'Oh, I'm sorry. Did you want to wallow in your guilt alone?' The made \(personOne) look up. 'What are you talking about.' Verna smiled, 'You killed that woman.''What? No, I didn't.' 'Think about it. She's been perfectly healthy, now she's sick? And that has nothing to do with you?'\(personOne) paused for a moment before she realized. 'Oh my God... I'm carrying the disease.")
+                                    .foregroundColor(.white)
+                                    .font(.system(size: 15, weight: .light, design: .serif))
+                                    .multilineTextAlignment(.center)
+                                    .frame(width: 300)
+                                
+                                Text("The end.")
+                                    .foregroundColor(.white)
+                                    .font(.system(size: 15, weight: .light, design: .serif))
+                                    .multilineTextAlignment(.center)
+                                    .frame(width: 300)
+                            }
+                        }
+                        }
                             }
                         }
                     }
                 }
-            }
+            
         
 
 
