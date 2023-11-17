@@ -200,7 +200,7 @@ struct Chapter5View: View {
                                 ZStack {
                                     Rectangle()
                                         .foregroundColor(Color("darkgray"))
-                                        .frame(width: 365, height: 180)
+                                        .frame(width: 365, height: 170)
                                         .cornerRadius(cornerRadius)
                                         .overlay(// MAKES A BORDER ROUNDED
                                             RoundedRectangle(cornerRadius: cornerRadius)
